@@ -1,0 +1,744 @@
+:root {
+    --teal: #008080;
+}
+
+
+.raleway-Mfont {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .5)), url("Images/homebg.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    color: darkgray;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+nav {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.brand {
+    font-size: 3rem;
+    font-weight: 300;
+    transform: translateX(-100rem);
+    animation: slideIn .5s forwards;
+}
+
+.brand span {
+    color: var(--teal);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    transform: translateX(100rem);
+    animation: slideIn .5s forwards;
+}
+
+nav ul li:nth-child(1) {
+    animation-delay: 0s;
+}
+
+nav ul li:nth-child(2) {
+    animation-delay: .5s;
+}
+
+nav ul li:nth-child(3) {
+    animation-delay: 1s;
+}
+
+nav ul li:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+nav ul li:nth-child(5) {
+    animation-delay: 2s;
+}
+
+nav ul li a {
+    padding: 1rem 0;
+    margin: 0 3rem;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+nav ul li a:last-child {
+    margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--teal);
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+
+nav ul li a::before {
+    top: 0;
+    transform-origin: left;
+}
+
+nav ul li a::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+.overlay {
+    background-color: white;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: opacity 650ms;
+    transform: scale(0);
+    opacity: 0;
+    display: none;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+@keyframes slideIn {
+    from {}
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        padding-top: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-top: 5rem;
+    }
+
+    nav ul li a {
+        margin: 0;
+        font-size: 2.5rem;
+        color: #333;
+    }
+
+    .brand a {
+        font-size: 5rem;
+        color: #333;
+    }
+
+    .overlay.menu-open,
+    nav.menu-open {
+        display: flex;
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    body {
+        background-color: white;
+    }
+}
+
+.title-text {
+    color: white;
+    margin-top: 130px;
+    text-align: center;
+}
+
+.title-head h1 {
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    animation: drop-in 1s ease 200ms backwards;
+    font-family: "Raleway", sans-serif;
+}
+
+
+.title-caption {
+    margin-top: 65px;
+    font-size: 2rem;
+    font-family: "Raleway", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    animation: drop-in 1200ms ease 500ms backwards;
+}
+
+.title-button {
+    margin-top: 30px;
+}
+
+.title-button button {
+    background-color: #008080;
+    padding: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #eee;
+    border-radius: 48px;
+    font-size: 1.7rem;
+    font-family: "Raleway", sans-serif;
+    border: none;
+    position: relative;
+    transition: all 0.5s;
+    display: inline-block;
+    animation: drop-in 1400ms ease 700ms backwards;
+}
+
+.title-button button:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.title-button button:hover {
+    cursor: pointer;
+    padding-right: 28px;
+    padding-left: 20px;
+}
+
+.title-button button:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+
+.about-row {
+    display: flex;
+    margin-top: 50px;
+}
+
+.about-column {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.about-column h2{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.about-column p{
+    margin-top: 30px;
+    font-size: 1.8rem;
+    line-height: 40px;
+    margin-right: 20px;
+}
+
+.about-column img {
+    width: 75%;
+    max-width: 100%; 
+    border-radius: 45% 55% 32% 68% / 72% 45% 55% 28%;
+}
+
+@media screen and (max-width: 700px) {
+    .about-row {
+        flex-direction: column; 
+    }
+
+
+    .about-column img {
+        width: 80%; 
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 45% 55% 32% 68% / 72% 45% 55% 28%;
+    }
+}
+
+
+.faq-title h1{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.accordian {
+    margin: auto;
+    width: 75%;
+    padding-bottom: 100px;
+}
+
+.accordian li{
+    list-style: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(225, 225, 225, 0.7);
+}
+
+.accordian li label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.faq-label::before{
+    content: "+";
+    margin-right: 10px;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordian .q-content {
+    color: #666;
+    padding: 0 10px;
+    line-height: 26px;
+    font-size: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordian input[type="radio"]:checked + label + .q-content{
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+.accordian input[type="radio"]:checked + label::before{
+    content: "-";
+}
+
+@keyframes drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+.job-page-title{
+    text-align: center;
+    font-size: 1.9rem;
+    margin-top: 20px;
+    animation: drop-in 1s ease 200ms backwards;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.careers-main {
+    color: white;
+    margin-top: 50px;
+    /* Add margin to the top */
+}
+
+
+.card {
+    width: calc(33.3% - 20px);
+    /* Adjust width for responsiveness */
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Enhance box shadow */
+    border-radius: 10px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Hide overflowing content */
+    background-color: #f9f9f9;
+    /* Card background color */
+    transition: transform 0.3s ease;
+    animation: drop-in 1s ease 200ms backwards;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Add hover effect */
+    cursor: pointer;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+    /* Center align the text */
+}
+
+.card-title {
+    font-size: 1.8rem;
+    /* Increase font size */
+    color: #333;
+    /* Change font color */
+    margin-bottom: 10px;
+    /* Add margin below the title */
+}
+
+.card-text {
+    font-size: 1.4rem;
+    /* Increase font size */
+    color: #666;
+    /* Change font color */
+    line-height: 1.5;
+    /* Adjust line height for better spacing */
+    margin-bottom: 20px;
+    /* Add margin below the text */
+}
+
+.card-button {
+    background-color: var(--teal);
+    /* Change button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 3;
+}
+
+.card-button:hover {
+    background-color: #006666;
+    /* Add hover effect */
+    cursor: crosshair;
+}
+
+/* Style for the hidden container */
+.additional-info {
+    display: none;
+    /* Initially hide the container */
+}
+
+/* Style for the card when it's clicked */
+.card.active {
+    display: block;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 70%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: auto;
+}
+
+.popupcontrols {
+    text-align: right;
+}
+
+#popupclose {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#popupclose:hover {
+    color: #888;
+}
+
+.popupcontent {
+    margin-top: 20px;
+}
+
+.job-info {
+    text-align: center;
+}
+
+.job-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.job-title {
+    font-size: 3rem;
+    margin-top: -40px;
+    position: unset;
+}
+
+.job-description {
+    font-size: 2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.qual-title{
+    font-size: 2.5rem;
+}
+
+.job-qualifications {
+    font-size: 2rem;
+    color: #666;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.job-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.apply-button, .benefits-button {
+    background-color: #008080;
+    font-size: 1.75rem;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover, .benefits-button:hover {
+    background-color: #006666;
+}
+
+
+@media screen and (max-width: 700px){
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 500px){
+    .card {
+        width: calc(80% - 20px);
+    }
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    /* Adjust the width of the image */
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .5)), url("Images/contact.jpg");
+    background-size: cover;
+    z-index: -1;
+    /* Place it behind other content */
+}
+
+.contact-form {
+    display: flex;
+    height: 100vh;
+}
+
+.contact-image {
+    flex: 1;
+}
+
+.contact-fields {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-fields h2 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--teal);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #099898;
+}
+
+
+@media screen and (max-width: 600px) {
+    .background-image {
+        display: none;
+    }
+
+    .contact-form {
+        display: block;
+        margin-top: 200px;
+    }
+}
+
+.benefits-title{
+    margin-top: 50px;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.benefits-row {
+    margin-top: 75px;
+}
+
+@media screen and (max-width: 780px){
+    .benefits-row {
+        padding-bottom: 100px;
+    }
+}
+
+.benefits-column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px;
+    text-align: center;
+}
+
+.benefits-column i{
+    text-align: center;
+    font-size: 70px;
+}
+
+.benefits-column h2 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.benefits-column p{
+    line-height: 30px;
+    font-size: 1.7rem;
+    text-align: left;
+}
+
+.benefits-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .benefits-column {
+        width: 100%;
+    }
+
+    .benefits-row {
+        padding-bottom: 0px;
+    }
+}

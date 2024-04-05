@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay" style="background-color: white;"></div>
+        <div class="container">
+            <nav>
+                <h1 class="brand"><a href="index.html">Flex<span>a</span>Fit</a></h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about-us">About</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="benefits.html">Benefits</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="title-text">
+            <div class="title-head">
+                <h1 style="font-size: 5rem; font-family: 'Raleway', sans-serif;">Personalized Fitness Made for You</h1>
+            </div>
+            <div class="title-caption">
+                <p style="font-family: 'Raleway', sans-serif;">"Strength doesn't come from what you can do. It comes
+                    from overcoming the things you once thought you couldn't." - Rikki Rogers</p>
+            </div>
+            <div class="title-button">
+                <a href="#about-us">
+                    <button>Learn More</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-row" id="about-us" data-aos="fade-up">
+        <div class="about-column">
+            <img src="Images/about-us.jpg" alt="">
+        </div>
+        <div class="about-column">
+            <h2>Who Are We?</h2>
+            <p>We are a passionate team committed to combating obesity and promoting self-improvement. Our diverse group includes health professionals, educators, and wellness advocates, all dedicated to empowering individuals to take charge of their health. By offering support, resources, and education, we aim to foster a supportive community focused on personal growth and healthy living. Together, we strive to inspire positive change and help individuals lead happier, healthier lives.</p>
+        </div>
+    </div>
+
+    <div class="about-row" data-aos="fade-up">
+        <div class="about-column">
+            <h2>Our Mission</h2>
+            <p>Our mission is to combat obesity and inspire self-improvement through nutrition education, community support, and the promotion of healthy, sustainable lifestyle changes. We believe in empowering individuals to take control of their health and well-being, encouraging them to live their best lives through balanced nutrition, regular physical activity, and mental wellness practices. Together, we can build a healthier future for all.</p>
+        </div>
+        <div class="about-column">
+            <img src="Images/obese-graph.jpeg" alt="" height="120%">
+        </div>
+    </div>
+
+    <div class="faq-title" data-aos="fade-up">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+    <ul class="accordian" data-aos="fade-up">
+        <li>
+            <input type="radio" name="accordian" id="first">
+            <label class="faq-label" for="first">How do I find available job openings at the gym?</label>
+            <div class="q-content">
+                <p>All current job openings are listed on our website under the "Careers" section. This page is regularly updated with new opportunities ranging from personal trainers and group class instructors to customer service and administrative positions. We encourage you to check back frequently for new postings and to follow us on our social media channels for updates on job opportunities.</p>
+            </div>
+        </li>
+
+        <li>
+            <input type="radio" name="accordian" id="second">
+            <label class="faq-label" for="second">What is the application process for a job at the gym?</label>
+            <div class="q-content">
+                <p>To apply for a position at our gym, please visit the "Careers" section of our website and click on the job opening that interests you. You will find a detailed description of the role, including responsibilities, qualifications, and application instructions. Typically, the application process involves submitting a resume and a cover letter through our online portal. For some positions, additional materials such as certifications or portfolios may be requested.</p>
+            </div>
+        </li>
+
+        <li>
+            <input type="radio" name="accordian" id="third">
+            <label class="faq-label" for="third">How long can I expect to wait for a response after submitting a job application?</label>
+            <div class="q-content">
+                <p>We value each applicant's interest in joining our team and are committed to reviewing each application thoroughly. Typically, it takes us about 2 to 3 weeks to process applications. After review, if your qualifications match our needs, our HR department will contact you to schedule an interview. We also strive to notify all applicants once a position has been filled, so everyone is informed of their application status.</p>
+            </div>
+        </li>
+
+        <li>
+            <input type="radio" name="accordian" id="fourth">
+            <label class="faq-label" for="fourth">Is there a specific time of year when you're more likely to have job openings?</label>
+            <div class="q-content">
+                <p>Our hiring needs fluctuate throughout the year, often peaking in the early spring and late fall as we prepare for our busiest seasons: summer and the New Year, when gym attendance spikes. However, we encourage interested candidates to submit their applications at any time. Even if we're not actively hiring for a specific position, we always welcome the opportunity to discover talented individuals who could be a great fit for our team in the future. Keep an eye on our website's "Careers" section for the most up-to-date listings and consider setting up job alerts if our system allows, so you're notified immediately when new opportunities arise.</p>
+            </div>
+        </li>
+    </ul>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

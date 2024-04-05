@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <link rel="stylesheet" href="lebron.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+
+
+<body>
+    <header>
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay" style="background-color: white;"></div>
+        <div class="container">
+            <nav>
+                <h1 class="brand"><a href="index.html">Flex<span>a</span>Fit</a></h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about-us">About</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="benefits.html">Benefits</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+    <div class="apply-container">
+        <div class="apply_box">
+            <h1>
+                Job Application
+                <span class="title_small"></span>
+            </h1>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="84b6af16-ba3f-426a-befa-1e8dca2f6c93">
+                <div class="form_container">
+                    <div class="form_control">
+                        <label class = "apply-label" for="first_name"> First Name </label>
+                        <input id="first_name" name="first_name" placeholder="Enter First Name..." />
+                    </div>
+                    <div class="form_control">
+                        <label class = "apply-label" for="last_name"> Last Name </label>
+                        <input id="last_name" name="last_name" placeholder="Enter Last Name..." />
+                    </div>
+                    <div class="form_control">
+                        <label class = "apply-label" for="email"> Email </label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email..." />
+                    </div>
+                    <div class="form_control">
+                        <label class = "apply-label" for="job_role"> Job Role </label>
+                        <select id="job_role" name="job_role">
+                            <option value="">Select Job Role</option>
+                            <option value="Blogger/Content Creator">Blogger/Content Creator</option>
+                            <option value="Dietitian">Dietitian</option>
+                            <option value="Facility Manager">Facility Manager</option>
+                            <option value="Marketing Specialist">Marketing Specialist</option>
+                            <option value="Personal Trainer">Personal Trainer</option>
+                            <option value="Secretary">Secretary</option>
+                        </select>
+                    </div>
+                    <div class="textarea_control">
+                        <label class = "apply-label" for="address"> Address </label>
+                        <textarea id="address" name="address" row="4" cols="50" placeholder="Enter Address"></textarea>
+                    </div>
+                    <div class="form_control">
+                        <label class = "apply-label" for="city"> City </label>
+                        <input id="city" name="city" placeholder="Enter City Name..." />
+                    </div>
+                    <div class="form_control">
+                        <label class = "apply-label" for="pincode"> Pincode </label>
+                        <input type="number" id="pincode" name="pincode" placeholder="Enter Pincode Name..." />
+                    </div>
+                    <div class="form_control">
+                        <label class = "apply-label" for="date"> Date </label>
+                        <input value="2024-04-2" type="date" id="date" name="date" />
+                    </div>
+                    <div class="form_control">
+                        <label class = "apply-label" for="upload"> Upload Your CV </label>
+                        <input type="file" id="upload" name="upload" />
+                    </div>
+                </div>
+                <div class="button_container">
+                    <div class="h-captcha" data-captcha="true"></div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</header>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
